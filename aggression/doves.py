@@ -1,9 +1,10 @@
 import random
 import matplotlib.pyplot as plt
 
-# Initial populations of doves and hawks
+# Creature referred to as 'dove' because it is not competetive
+
+# Initial populations of doves
 doves = 10
-hawks = 0
 
 # Total number of days the simulation will run for
 days = 50
@@ -14,16 +15,16 @@ population = []
 
 # Each day...
 for day in range(days):
-    # A dict to store the number of creatures occupying a location at any day
+    # A dict to store the number of doves occupying a location at any day
     locations = {}
-    # Intialize each location with zero creatures
+    # Intialize each location with zero doves
     for l in range(lnum):
         locations[l] = 0
 
     births = 0
     deaths = 0
 
-    # For each creature, randomize its location
+    # For each dove, randomize its location
     for dove in range(doves):
         location = random.randint(0, lnum-1)
         # If vacant, occupy :)
@@ -34,12 +35,13 @@ for day in range(days):
             deaths += 1
             print(f'death at {location}')
 
-    # If location only occupied by one creature, can reproduce
+    # If location only occupied by one dove, can reproduce
     for location in locations:
         if locations[location] == 1:
             print(f'birth at {location}')
             births += 1
 
+    # Adjust population accordingly
     doves -= deaths
     doves += births
 
