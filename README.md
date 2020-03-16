@@ -17,10 +17,10 @@ The first concept is the trait of aggression, and how it affects the population 
 The table below summarizes the encounters and their consequences. 
 
 
-|      | meets dove             | meets hawk           |
+|      | If dove            | If hawk           |
 |------|------------------|----------------|
-| If dove | survive, survive | die, reproduce |
-| If hawk | reproduce, die   | die, die       |
+| meets dove | survive, survive | reproduce, die |
+| meets hawk | die, reproduce   | die, die       |
 
 
 I first simulated a dove-only ecosystem, which started with 20 doves, had 100 unique locations, and ran for 100 days. The plot below shows how population varied with each day.
