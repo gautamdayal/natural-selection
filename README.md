@@ -12,4 +12,10 @@ The first concept is the trait of aggression, and how it affects the population 
   * If 2 doves meet, they each eat 1 piece and survive to the next day, but don't reproduce
   * If a dove and a hawk meet, the hawk takes more food, so it can reproduce, though the dove does not survive
   * If 2 hawks meet, this leads to a fight and they both do not survive
-  
+
+The table below summarizes the encounters and their consequences. 
+
+|      | Dove             | Hawk           |
+|------|------------------|----------------|
+| Dove | survive, survive | die, reproduce |
+| Hawk | reproduce, die   | die, die       |
