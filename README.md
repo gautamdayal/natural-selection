@@ -29,3 +29,7 @@ I first simulated a dove-only ecosystem, which started with 20 doves, had 100 un
 The population shoots up immediately as there is a lower chance that creatures are overallocated to a single location. The code prints births, deaths, and a daily summary to the console. On Day 1, this is what it looks like:
 
 ![](resources/day1.png)
+
+As quickly as Day 5, the deaths outnumber the births. This is because the population is greater than the number of locations, so fewer doves get to reproduce. This is shown in the console below.
+
+![](resources/day5.png)
