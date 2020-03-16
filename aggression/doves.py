@@ -4,10 +4,10 @@ import matplotlib.pyplot as plt
 # Creature referred to as 'dove' because it is not competetive
 
 # Initial populations of doves
-doves = 10
+doves = 20
 
 # Total number of days the simulation will run for
-days = 50
+days = 100
 # Number of available locations with food
 lnum = 100
 
