@@ -12,6 +12,7 @@ The first concept is the trait of aggression, and how it affects the population 
   * If 2 doves meet, they each eat 1 piece and survive to the next day, but don't reproduce
   * If a dove and a hawk meet, the hawk takes more food, so it can reproduce, though the dove does not survive
   * If 2 hawks meet, this leads to a fight and they both do not survive
+  * If an organism enters an occupied location, it does not survive
 
 The table below summarizes the encounters and their consequences. 
 
@@ -24,3 +25,7 @@ The table below summarizes the encounters and their consequences.
 
 I first simulated a dove-only ecosystem, which started with 20 doves, had 100 unique locations, and ran for 100 days. The plot below shows how population varied with each day.
 ![](resources/plot.png)
+
+The population shoots up immediately as there is a lower chance that creatures are overallocated to a single location. The code prints births, deaths, and a daily summary to the console. On Day 1, this is what it looks like:
+
+![](resources/day1.png)
