@@ -15,7 +15,9 @@ The first concept is the trait of aggression, and how it affects the population 
 
 The table below summarizes the encounters and their consequences. 
 
+<p align='center'>
 |      | Dove             | Hawk           |
 |------|------------------|----------------|
 | Dove | survive, survive | die, reproduce |
 | Hawk | reproduce, die   | die, die       |
+</p>
