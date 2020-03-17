@@ -2,7 +2,7 @@ A collection of code inspired by [this series of youtube videos](https://www.you
 
 I've organized it by each concept examined that I found interesting.
 
-## aggression
+# aggression
 The first concept is the trait of aggression, and how it affects the population dynamic. In my code, I've simulated the classic game-theoretic _hawks and doves_ approach to the problem. Following is a short description of the algorithm. 
 * Simulation runs for a specified number of days, and consists of a specified number of locations
 * Each location has two pieces of food
