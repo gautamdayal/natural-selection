@@ -2,7 +2,11 @@ A collection of code inspired by [this series of youtube videos](https://www.you
 
 I've organized it by each concept examined that I found interesting.
 
-# aggression
+### table of contents
+1. [aggression](#aggression)
+    1. [doves only](#dovesonly)
+
+# aggression <a name="aggression"></a>
 The first concept is the trait of aggression, and how it affects the population dynamic. In my code, I've simulated the classic game-theoretic _hawks and doves_ approach to the problem. Following is a short description of the algorithm. 
 * Simulation runs for a specified number of days, and consists of a specified number of locations
 * Each location has two pieces of food
@@ -21,7 +25,7 @@ The table below summarizes the encounters and their consequences.
 | meets dove | survive, survive | reproduce, die |
 | meets hawk | die, reproduce   | die, die       |
 
-## doves only
+## doves only <a name="dovesonly"></a>
 I first simulated a dove-only ecosystem, which started with 20 doves, had 100 unique locations, and ran for 100 days. The plot below shows how population varied with each day.
 ![](resources/plot.png)
 
