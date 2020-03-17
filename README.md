@@ -21,7 +21,7 @@ The table below summarizes the encounters and their consequences.
 | meets dove | survive, survive | reproduce, die |
 | meets hawk | die, reproduce   | die, die       |
 
-
+## doves only
 I first simulated a dove-only ecosystem, which started with 20 doves, had 100 unique locations, and ran for 100 days. The plot below shows how population varied with each day.
 ![](resources/plot.png)
 
