@@ -36,3 +36,40 @@ The population shoots up immediately as there is a lower chance that creatures a
 As quickly as Day 5, the deaths outnumber the births. This is because the population is greater than the number of locations, so fewer doves get to reproduce. This is shown in the console below.
 
 ![](resources/day5.png)
+
+## doves and hawks
+
+For this section, I had a similar approach, though I needed a new set of variables and processes to take care of hawks: a tally of deaths and births, and I had to code up the consequence table shown earlier on this page. Here is the addition for assigning locations to hawks.
+
+```python
+# Repeat location selection process for hawks
+    for hawk in range(hawks):
+        location = random.randint(0, lnum-1)
+        if dove_locations[location] + hawk_locations[location] < 2:
+            hawk_locations[location] += 1
+        else:
+            hawk_deaths += 1
+            print(f'- hawk at {location}')
+```
+
+Here is a simple implementation of the consequence table:
+
+```python
+for location in dove_locations:
+        at_location = dove_locations[location] + hawk_locations[location]
+
+        if dove_locations[location] == 1 and at_location == 1:
+            print(f'+ dove at {location}')
+            dove_births += 1
+        elif hawk_locations[location] == 1 and at_location == 1:
+            print(f'+ hawk at {location}')
+            hawk_births += 1
+        elif hawk_locations == 1 and at_location == 2:
+            print(f'+ hawk at {location}')
+            print(f'- dove at {location}')
+            hawk_births += 1
+            dove_deaths += 1
+        elif hawk_locations[location] == 2:
+            print(f'-- hawk at {location}')
+            hawk_deaths += 2
+```
