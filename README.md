@@ -5,6 +5,7 @@ I've organized it by each concept examined that I found interesting.
 ### table of contents
 1. [aggression](#aggression)
     1. [doves only](#dovesonly)
+    2. [doves and hawks](#dovesandhawks)
 
 # aggression <a name="aggression"></a>
 The first concept is the trait of aggression, and how it affects the population dynamic. In my code, I've simulated the classic game-theoretic _hawks and doves_ approach to the problem. Following is a short description of the algorithm. 
@@ -37,7 +38,7 @@ As quickly as Day 5, the deaths outnumber the births. This is because the popula
 
 ![](resources/day5.png)
 
-## doves and hawks
+## doves and hawks <a name="dovesandhawks"></a>
 
 For this section, I had a similar approach, though I needed a new set of variables and processes to take care of hawks: a tally of deaths and births, and I had to code up the consequence table shown earlier on this page. Here is the addition for assigning locations to hawks.
 
