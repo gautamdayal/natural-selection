@@ -74,3 +74,6 @@ for location in dove_locations:
             print(f'-- hawk at {location}')
             hawk_deaths += 2
 ```
+One potential flaw is that in my current code, the location allocation process is ordered: one set of creatures is completely allocated before the other. Since being allocated to an occupied location could lead to decreases in population, this is unfair to the species located later in the order. Even after I allocated hawks _before_ doves, I get the following population graph. 
+
+![](resources/plot2.png)
