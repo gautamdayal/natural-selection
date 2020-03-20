@@ -79,8 +79,8 @@ for day in range(days):
     hawk_population.append(hawks)
 
 
-plt.plot(dove_population)
-plt.plot(hawk_population)
+plt.plot(dove_population, label='doves')
+plt.plot(hawk_population, label='hawks')
 plt.xlabel('Days')
 plt.ylabel('Population')
 plt.legend()
