@@ -27,7 +27,32 @@ The table below summarizes the encounters and their consequences.
 | meets hawk | die, reproduce   | die, die       |
 
 ## doves only <a name="dovesonly"></a>
-I first simulated a dove-only ecosystem, which started with 20 doves, had 100 unique locations, and ran for 100 days. The plot below shows how population varied with each day.
+I first simulated a dove-only ecosystem, which started with 20 doves, had 100 unique locations, and ran for 100 days. 
+
+```python
+# Initial populations of doves
+doves = 10000
+
+# Total number of days the simulation will run for
+days = 200
+# Number of available locations with food
+lnum = 100
+```
+The location allocation process is simple, as shown below.
+
+```python
+for dove in range(doves):
+        location = random.randint(0, lnum-1)
+        # If vacant, occupy :)
+        if locations[location] < 2:
+            locations[location] += 1
+        # Else, no food, die :(
+        else:
+            deaths += 1
+            print(f'death at {location}')
+```
+
+The plot below shows how population varied with each day.
 ![](resources/plot.png)
 
 The population shoots up immediately as there is a lower chance that creatures are overallocated to a single location. The code prints births, deaths, and a daily summary to the console. On Day 1, this is what it looks like:
