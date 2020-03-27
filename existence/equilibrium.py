@@ -1,7 +1,9 @@
 # import matplotlib.pyplot as plt
 import random
 
-class Species(object):
+# A class of species that cannot reproduce
+# Population is entirely driven by birth and death rates
+class Existor(object):
     def __init__(self, population, birth_rate, death_rate):
         self.population = population
         self.birth_rate = birth_rate
@@ -17,9 +19,6 @@ class Species(object):
     def getEquilibrium(self):
         return(self.birth_rate/self.death_rate)
 
-pigeon = Species(0, 100, 10)
-
-n = 100
-for i in range(n):
-    print(pigeon.population)
-    pigeon.update()
+# A more realistic version of Species as organisms can replicate
+class Replicator(Existor):
+    pass
