@@ -1,4 +1,5 @@
-# import matplotlib.pyplot as plt
+from matplotlib import pyplot as plt
+from matplotlib import animation
 import random
 
 # A class of species that cannot reproduce
@@ -36,3 +37,23 @@ class Replicator(Existor):
 
 raindrop = Existor(0, 100, 10)
 pigeon = Replicator(3, 10, 5, 3)
+
+fig = plt.figure()
+ax = plt.axes()
+population, = ax.plot([], [], lw=2)
+
+def init():
+    line.set_data([], [])
+    return line,
+
+def animate(i):
+    x = np.linspace(0, 2, 1000)
+    m = 0.05
+    y = x * m + 0.1
+    line.set_data(x, y)
+    return line,
+
+anim = animation.FuncAnimation(fig, animate, init_func=init,
+                               frames=200, interval=100, blit=True)
+
+plt.show()
