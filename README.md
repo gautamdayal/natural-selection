@@ -5,6 +5,7 @@ I've organized it by each concept examined that I found interesting.
 ### table of contents
 1. [existence](#existence)
     1. [raindrops](#raindrops)
+    2. [pigeons](#pigeons)
 2. [aggression](#aggression)
     1. [doves only](#dovesonly)
     2. [doves and hawks](#dovesandhawks)
