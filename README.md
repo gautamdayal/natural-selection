@@ -13,9 +13,10 @@ The first concept we'll be looking at may not be completely relevant to the fina
 * It hasn't been destroyed
 For this reason, our aim in this module will be to give organisms birth-rates, death-rates, and replication-rates and see how their populations grow. 
 
-In our first simulation, we have a probability that a new organism will be born, and a probability for each organism that it will die. An equation for the predicted equilibrium population is shown below.
-![B=ND](https://render.githubusercontent.com/render/math?math=B%3DND)
-![N=B/D](https://render.githubusercontent.com/render/math?math=N%3DB%2FD)
+In our first simulation, we have a probability that a new organism will be born, and a probability for each organism that it will die. An equation for the predicted equilibrium population is shown below.\
+![B=ND](https://render.githubusercontent.com/render/math?math=B%3DND)\
+![N=\frac{B}{D}](https://render.githubusercontent.com/render/math?math=N%3D%5Cfrac%7BB%7D%7BD%7D)
+
 
 # aggression <a name="aggression"></a>
 The second concept is the trait of aggression, and how it affects the population dynamic. In my code, I've simulated the classic game-theoretic _hawks and doves_ approach to the problem. Following is a short description of the algorithm. 
