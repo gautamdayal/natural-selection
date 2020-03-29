@@ -3,7 +3,8 @@ A collection of code inspired by [this series of youtube videos](https://www.you
 I've organized it by each concept examined that I found interesting.
 
 ### table of contents
-1. [aggression](#aggression)
+1. [existence](#existence)
+2. [aggression](#aggression)
     1. [doves only](#dovesonly)
     2. [doves and hawks](#dovesandhawks)
 
@@ -36,6 +37,8 @@ class Existor(object):
 ```
 Defining an instance of an Existor as `raindrop = Existor(0, 100, 10)`, we get the following population graph.\
 ![](resources/raindrop.png)
+
+The predicted population based on our equation was pretty close to the actual mean population. The reason for the oscillation is because even if there were more organisms than the equilibrium, that would cause the death-rate to be higher than the birth-rate, bringing the population back to equilibrium. 
 
 # aggression <a name="aggression"></a>
 The second concept is the trait of aggression, and how it affects the population dynamic. In my code, I've simulated the classic game-theoretic _hawks and doves_ approach to the problem. Following is a short description of the algorithm. 
