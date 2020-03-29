@@ -1,5 +1,4 @@
 from matplotlib import pyplot as plt
-from matplotlib import animation
 import random
 
 # A class of species that cannot reproduce
@@ -20,6 +19,18 @@ class Existor(object):
     def getEquilibrium(self):
         return(self.birth_rate/self.death_rate)
 
+    def plotPopulation(self, cycles, with_equilibrium = False):
+        X = [i for i in range(cycles)]
+        Y = []
+        for cycle in range(cycles):
+            self.update()
+            Y.append(self.population)
+
+        plt.plot(X, Y)
+        if with_equilibrium:
+            plt.plot([self.getEquilibrium() for i in range(cycles)])
+        plt.show()
+
 # A more realistic version of the Species class as organisms can replicate
 class Replicator(Existor):
     def __init__(self, population, birth_rate, death_rate, replication_rate):
@@ -38,22 +49,5 @@ class Replicator(Existor):
 raindrop = Existor(0, 100, 10)
 pigeon = Replicator(3, 10, 5, 3)
 
-fig = plt.figure()
-ax = plt.axes()
-population, = ax.plot([], [], lw=2)
-
-def init():
-    line.set_data([], [])
-    return line,
-
-def animate(i):
-    x = np.linspace(0, 2, 1000)
-    m = 0.05
-    y = x * m + 0.1
-    line.set_data(x, y)
-    return line,
-
-anim = animation.FuncAnimation(fig, animate, init_func=init,
-                               frames=200, interval=100, blit=True)
-
-plt.show()
+# raindrop.plotPopulation(500, True)
+pigeon.plotPopulation(500, True)
