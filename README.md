@@ -13,7 +13,8 @@ I've organized it by each concept examined that I found interesting.
 # existence <a name="existence"></a>
 The first concept we'll be looking at may not be completely relevant to the final natural selection model, but it helps start looking at the problem in a more mathematical and computational light. Why does something exist? Our definition is simple:
 * It was created
-* It hasn't been destroyed
+* It hasn't been destroyed  
+
 For this reason, our aim in this module will be to give organisms birth-rates, death-rates, and replication-rates and see how their populations grow. 
 ## raindrops <a name="raindrops"></a>
 In our first simulation, we have a probability that a new organism will be born, and a probability for each organism that it will die. An equation for the predicted equilibrium can be derived from ![B=ND](https://render.githubusercontent.com/render/math?math=B%3DND) to be ![N=\frac{B}{D}](https://render.githubusercontent.com/render/math?math=N%3D%5Cfrac%7BB%7D%7BD%7D). I have implemented a class for this type of simple organism that I call an _existor_. Extracts from the Python class are shown below. To view the full code, view the project on GitHub. 
