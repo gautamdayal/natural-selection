@@ -4,6 +4,7 @@ I've organized it by each concept examined that I found interesting.
 
 ### table of contents
 1. [existence](#existence)
+    1. [raindrops](#raindrops)
 2. [aggression](#aggression)
     1. [doves only](#dovesonly)
     2. [doves and hawks](#dovesandhawks)
@@ -13,7 +14,7 @@ The first concept we'll be looking at may not be completely relevant to the fina
 * It was created
 * It hasn't been destroyed
 For this reason, our aim in this module will be to give organisms birth-rates, death-rates, and replication-rates and see how their populations grow. 
-
+## raindrops <a name="raindrops"></a>
 In our first simulation, we have a probability that a new organism will be born, and a probability for each organism that it will die. An equation for the predicted equilibrium can be derived from ![B=ND](https://render.githubusercontent.com/render/math?math=B%3DND) to be ![N=\frac{B}{D}](https://render.githubusercontent.com/render/math?math=N%3D%5Cfrac%7BB%7D%7BD%7D). I have implemented a class for this type of simple organism that I call an _existor_. Extracts from the Python class are shown below. To view the full code, view the project on GitHub. 
 
 ```python
@@ -39,6 +40,10 @@ Defining an instance of an Existor as `raindrop = Existor(0, 100, 10)`, we get t
 ![](resources/raindrop.png)
 
 The predicted population based on our equation was pretty close to the actual mean population. The reason for the oscillation is because even if there were more organisms than the equilibrium, that would cause the death-rate to be higher than the birth-rate, bringing the population back to equilibrium. 
+
+## pigeons <a name="pigeons"></a>
+However, real-life organisms are different from raindrops in the sense that they can reproduce; to fix this, we can add a replication rate which modifies the equilibrium equation to be ![N=\frac{B}{D-R}](https://render.githubusercontent.com/render/math?math=N%3D%5Cfrac%7BB%7D%7BD-R%7D). The plot for Replicators is shown below. Since Replicator is a child class of Existor I have not included the code here. \
+![](resources/pigeon.png)
 
 # aggression <a name="aggression"></a>
 The second concept is the trait of aggression, and how it affects the population dynamic. In my code, I've simulated the classic game-theoretic _hawks and doves_ approach to the problem. Following is a short description of the algorithm. 
@@ -71,7 +76,7 @@ days = 200
 # Number of available locations with food
 lnum = 100
 ```
-The location allocation process is simple, as shown below.
+The location allocation process is simple, as shown below. The complete code is available on GitHub. 
 
 ```python
 for dove in range(doves):
