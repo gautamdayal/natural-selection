@@ -19,19 +19,20 @@ class Existor(object):
     def getEquilibrium(self):
         return(self.birth_rate/self.death_rate)
 
-    def plotPopulation(self, cycles, with_equilibrium = False):
+    def plotPopulation(self, cycles, with_equilibrium = False, with_mean = False):
         X = [i for i in range(cycles)]
         Y = []
         for cycle in range(cycles):
             self.update()
             Y.append(self.population)
 
+        plt.ylim(0, 5 * self.getEquilibrium())
         plt.plot(X, Y)
         if with_equilibrium:
             plt.plot([self.getEquilibrium() for i in range(cycles)])
         plt.show()
 
-# A more realistic version of the Species class as organisms can replicate
+# A more realistic child class of Species as organisms can replicate
 class Replicator(Existor):
     def __init__(self, population, birth_rate, death_rate, replication_rate):
         Existor.__init__(self, population, birth_rate, death_rate)
@@ -49,5 +50,5 @@ class Replicator(Existor):
 raindrop = Existor(0, 100, 10)
 pigeon = Replicator(3, 10, 5, 3)
 
-# raindrop.plotPopulation(500, True)
-pigeon.plotPopulation(500, True)
+raindrop.plotPopulation(500, True)
+# pigeon.plotPopulation(500, True)
