@@ -13,10 +13,29 @@ The first concept we'll be looking at may not be completely relevant to the fina
 * It hasn't been destroyed
 For this reason, our aim in this module will be to give organisms birth-rates, death-rates, and replication-rates and see how their populations grow. 
 
-In our first simulation, we have a probability that a new organism will be born, and a probability for each organism that it will die. An equation for the predicted equilibrium population is shown below.\
-![B=ND](https://render.githubusercontent.com/render/math?math=B%3DND)\
-![N=\frac{B}{D}](https://render.githubusercontent.com/render/math?math=N%3D%5Cfrac%7BB%7D%7BD%7D)
+In our first simulation, we have a probability that a new organism will be born, and a probability for each organism that it will die. An equation for the predicted equilibrium can be derived from ![B=ND](https://render.githubusercontent.com/render/math?math=B%3DND) to be ![N=\frac{B}{D}](https://render.githubusercontent.com/render/math?math=N%3D%5Cfrac%7BB%7D%7BD%7D). I have implemented a class for this type of simple organism that I call an _existor_. Extracts from the Python class are shown below. To view the full code, view the project on GitHub. 
 
+```python
+class Existor(object):
+    def __init__(self, population, birth_rate, death_rate):
+        self.population = population
+        self.birth_rate = birth_rate
+        self.death_rate = death_rate
+
+    # Updates population based on birth and death rates
+    def update(self):
+        if random.randint(0, 100) < self.birth_rate:
+            self.population += 1
+        for organism in range(self.population):
+            if random.randint(0, 100) < self.death_rate:
+                self.population -= 1
+
+    # Returns the predicted equilibrium value based on our equation
+    def getEquilibrium(self):
+        return(self.birth_rate/self.death_rate)
+```
+Defining an instance of an Existor as `raindrop = Existor(0, 100, 10)`, we get the following population graph.\
+![](resources/raindrop.png)
 
 # aggression <a name="aggression"></a>
 The second concept is the trait of aggression, and how it affects the population dynamic. In my code, I've simulated the classic game-theoretic _hawks and doves_ approach to the problem. Following is a short description of the algorithm. 
