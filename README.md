@@ -66,6 +66,8 @@ The table below summarizes the encounters and their consequences.
 | meets dove | survive, survive | reproduce, die |
 | meets hawk | die, reproduce   | die, die       |
 
+In his video, primer had survival chances and reproduction chances for dove meets hawk, which I may or may not have implemented depending on when you are reading this. 
+
 ## doves only <a name="dovesonly"></a>
 I first simulated a dove-only ecosystem, which started with 20 doves, had 100 unique locations, and ran for 100 days. 
 
