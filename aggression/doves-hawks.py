@@ -4,11 +4,11 @@ import matplotlib.pyplot as plt
 # Creature referred to as 'dove' because it is not competetive
 
 # Initial populations of doves
-doves = 5
-hawks = 5
+doves = 10
+hawks = 2
 
 # Total number of days the simulation will run for
-days = 100
+days = 1000
 # Number of available locations with food
 lnum = 100
 
@@ -65,8 +65,8 @@ for day in range(days):
             hawk_births += 1
             dove_deaths += 1
         elif hawk_locations[location] == 2:
-            print(f'-- hawk at {location}')
-            hawk_deaths += 2
+            print(f'- hawk at {location}')
+            hawk_deaths += 1
 
 
     # Adjust population accordingly
