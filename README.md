@@ -144,3 +144,8 @@ for location in dove_locations:
 One potential flaw is that in my current code, the location allocation process is ordered: one set of creatures is completely allocated before the other. Since being allocated to an occupied location could lead to decreases in population, this is unfair to the species located later in the order. Even after I allocated hawks _before_ doves, I get the following population graph. 
 
 ![](resources/plot2.png)
+
+If I change the code so that only 1 hawk dies as a result of a hawk-hawk match, I get a graph that makes much more sense. The hawk population first rises dramatically, then results in a sort of ebb and flow. 
+
+![](resources/better-hawks.png)
+![](resources/better-hawks-long.png)
